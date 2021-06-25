@@ -2,6 +2,9 @@ import random
 from generatePrime import generatePrime
 
 def pythTripletMod(p):
+  '''
+  Génère une liste de triplés pythagoriciens modulo p.
+  '''
   C = []
   compteur = 0
   
@@ -18,5 +21,8 @@ def pythTripletMod(p):
   return C
 
 def generatePythTripletMod():
+  '''
+  Génère un triplé pythagoricien aléatoire modulo un nombre premier aléatoire.
+  '''
   p = generatePrime()
   return (random.choice(pythTripletMod(p)), p)
